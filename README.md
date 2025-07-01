@@ -26,11 +26,14 @@ index | QuestionBody                                                            
 1     | i am playing around with my brand new motorola defy and trying to find a way to manage my contacts...                          | 2.2 froyo, contacts, dialer
 </ul>
 <ul> <h3> 3. User Modeling </h3>
-The file <code>UserHistory (TestData)</code>code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.
+The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.
 
 <br><i>Example format:</i>
 index | userid | historyCount | historyIDs | history                                                                                       | forum
 ------|--------|--------------|------------|-----------------------------------------------------------------------------------------------|--------
 0     | 44281  | 1            | 161862     | I need to reproduce the following plot...                                                     | Tex
 1     | 210    | 2            | 1537, 685  | There is a shell command that allows to measure how ..., So recently a Debian ...             | Unix
+</ul>
+<ul> <h3> 4. Recognizing Question Entailment </h3>
+  
 </ul>
