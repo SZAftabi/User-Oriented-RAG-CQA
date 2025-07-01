@@ -9,4 +9,28 @@ In recent years, pre-trained large language models (LLMs) have become a cornerst
 
 ## ⚙️ Data
 <p align="justify">
+You can freely access the CQADupStack dataset through the following link:<br>
+👉 http://nlp.cis.unimelb.edu.au/resources/cqadupstack/ <br><br>
+Follow the instructions below to use the corresponding data for each component of the proposed system:<br>
+  <ul> <h3> 1. Tag Diversity Preprocessing </h3>
+Extract questions and their corresponding tags from CQADupStack to handle tag diversity before performing user modeling.
+  </ul>
+  <ul> <h3> 2. Tag Generation </h3>
+Use the file named <code>User-Profiler (TrainData)</code> to train the tag generation component of the user knowledge profiler.
+You may evaluate the model using <code>User-Profiler (TestData)</code>.
 
+<br><i>Example format:</i>
+index | QuestionBody                                                                                                                   | tags
+------|----------------------------------------------------------------------------------------------------------------------------------|----------------------------
+0     | i want to send files to android tablet with a application from pc...                                                           | usb connection mode
+1     | i am playing around with my brand new motorola defy and trying to find a way to manage my contacts...                          | 2.2 froyo, contacts, dialer
+</ul>
+<ul> <h3> 3. User Modeling </h3>
+The file <code>UserHistory (TestData)</code>code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.
+
+<br><i>Example format:</i>
+index | userid | historyCount | historyIDs | history                                                                                       | forum
+------|--------|--------------|------------|-----------------------------------------------------------------------------------------------|--------
+0     | 44281  | 1            | 161862     | I need to reproduce the following plot...                                                     | Tex
+1     | 210    | 2            | 1537, 685  | There is a shell command that allows to measure how fast the data goes through it...          | Unix
+</ul>
