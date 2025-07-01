@@ -24,12 +24,6 @@ index | QuestionBody                                                            
   <ul> <h3> 2. Tag Generation </h3>
 Use the file named <code>User-Profiler (TrainData)</code> to train the tag generation component of the user knowledge profiler.
 You may evaluate the model using <code>User-Profiler (TestData)</code>.
-
-<br><i>Example format:</i>
-index | QuestionBody                                                                                                                   | tags
-------|----------------------------------------------------------------------------------------------------------------------------------|----------------------------
-0     | i want to send files to android tablet with a application from pc...                                                           | usb connection mode
-1     | i am playing around with my brand new motorola defy and trying to find a way to manage my contacts...                          | 2.2 froyo, contacts, dialer
 </ul>
 <ul> <h3> 3. User Modeling </h3>
 The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.
