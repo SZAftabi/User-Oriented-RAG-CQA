@@ -34,6 +34,18 @@ index | userid | historyCount | historyIDs | history                            
 0     | 44281  | 1            | 161862     | I need to reproduce the following plot...                                                     | Tex
 1     | 210    | 2            | 1537, 685  | There is a shell command that allows to measure how ..., So recently a Debian ...             | Unix
 </ul>
-<ul> <h3> 4. Recognizing Question Entailment </h3>
-  
+<ul> <h3> 4. Recognizing Question Entailment (RQE)</h3>
+Use the data named <code>Post-retrieval (TrainData)</code> to fine-tune your LLaMA-2 model for the RQE task.
+You may evaluate the model using <code>Post-retrieval (TestData)</code>.
+
+<br> <i>Example format:</i>
+index | id_Q1 | id_Q2  | q1                                                         | q2                                      | ... | entailment | U_Background_kn
+------|-------|--------|-------------------------------------------------------------|-----------------------------------------|-----|------------|-----------------
+0     | 119926| 48033  | When I use htop command for linux...                        | Is there a graphic tool to add new...   | ... | Not-entailed | linux, bash...
+1     | 41391 | 196200 | What is the best way to mention a word...                   | Should I use italics or quotes...       | ... | Entailed     | meaning, word...
+
+The data contains the following columns: <br>
+<i>index</i> (row number), <i>id_Q1, id_Q2</i> (question IDs), <i>q1, q2</i> (RQE questions), <i>body_Q1, body_Q2</i> (full question texts), <i>forum_x, forum_y</i> (forum names of Q1 and Q2), <i>dups_Q1, dups_Q2</i> (duplicate question IDs), <i>tags_Q1, tags_Q2</i> (associated tags), <i>title_Q1, title_Q2</i> (question titles), <i>userid_Q1, userid_Q2</i> (user IDs), <i>entailment</i> (label: Entailed / Not-entailed), <i>U_Background_kn</i> (user_1 knowledge profile)
 </ul>
+
+
