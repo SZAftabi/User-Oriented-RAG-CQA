@@ -12,9 +12,10 @@ In recent years, pre-trained large language models (LLMs) have become a cornerst
 You can freely access the CQADupStack dataset through the following link:<br>
 👉 http://nlp.cis.unimelb.edu.au/resources/cqadupstack/ <br><br>
 Follow the instructions below to use the corresponding data for each component of the proposed system:<br>
+</p>
   <ul> <h3> 1. Tag Diversity Preprocessing </h3>
-Extract questions and their corresponding tags from CQADupStack to handle tag diversity before performing user modeling.<br> 
-    <br><i>Example format:</i>
+<p align="justify">Extract questions and their corresponding tags from CQADupStack to handle tag diversity before performing user modeling.</p>
+    <i>Example format:</i>
     
 index | QuestionBody                                                                                                                   | tags
 ------|----------------------------------------------------------------------------------------------------------------------------------|----------------------------
@@ -22,9 +23,9 @@ index | QuestionBody                                                            
 1     | i am playing around with my brand new motorola defy and trying to find a way to manage my contacts...                          | 2.2 froyo, contacts, dialer
   </ul>
   <ul> <h3> 2. Tag Generation </h3>
-Use the file named <code>User-Profiler (TrainData)</code> to train the tag generation component of the user knowledge profiler.
-You may evaluate the model using <code>User-Profiler (TestData)</code>.<br> 
-    <br><i>Example format:</i>
+<p align="justify">Use the file named <code>User-Profiler (TrainData)</code> to train the tag generation component of the user knowledge profiler.
+You may evaluate the model using <code>User-Profiler (TestData)</code>.</p>
+    <i>Example format:</i>
     
 | index | Question_ID | Forum_Name | User_ID | Question_Body                                                                                                                                       | Tags                         |
 |-------|-------------|------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
@@ -33,8 +34,8 @@ You may evaluate the model using <code>User-Profiler (TestData)</code>.<br>
 
 </ul>
 <ul> <h3> 3. User Modeling </h3>
-The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.<br> 
-    <br><i>Example format:</i>
+<p align="justify">The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.</p>
+    <i>Example format:</i>
     
 index | userid | historyCount | historyIDs | history                                                                                       | forum
 ------|--------|--------------|------------|-----------------------------------------------------------------------------------------------|--------
@@ -42,21 +43,20 @@ index | userid | historyCount | historyIDs | history                            
 1     | 210    | 2            | 1537, 685  | There is a shell command that allows to measure how ..., So recently a Debian ...             | Unix
 </ul>
 <ul> <h3> 4. Recognizing Question Entailment (RQE)</h3>
-Use the data named <code>Post-retrieval (TrainData)</code> to fine-tune your LLaMA-2 model for the RQE task.
-You may evaluate the model using <code>Post-retrieval (TestData)</code>.<br> 
-    <br><i>Example format:</i>
+<p align="justify">Use the data named <code>Post-retrieval (TrainData)</code> to fine-tune your LLaMA-2 model for the RQE task. You may evaluate the model using <code>Post-retrieval (TestData)</code>.</p>
+    <i>Example format:</i>
     
 index | id_Q1 | id_Q2  | q1                                                         | q2                                      | ... | entailment | U_Background_kn
 ------|-------|--------|-------------------------------------------------------------|-----------------------------------------|-----|------------|-----------------
 0     | 119926| 48033  | When I use htop command for linux...                        | Is there a graphic tool to add new...   | ... | Not-entailed | linux, bash...
 1     | 41391 | 196200 | What is the best way to mention a word...                   | Should I use italics or quotes...       | ... | Entailed     | meaning, word...
 
-The data contains the following columns: <br>
+<p align="justify">The data contains the following columns: <br>
 <i>index</i> (row number), <i>id_Q1, id_Q2</i> (question IDs), <i>q1, q2</i> (RQE questions), <i>body_Q1, body_Q2</i> (full question texts), <i>forum_x, forum_y</i> (forum names of Q1 and Q2), <i>dups_Q1, dups_Q2</i> (duplicate question IDs), <i>tags_Q1, tags_Q2</i> (associated tags), <i>title_Q1, title_Q2</i> (question titles), <i>userid_Q1, userid_Q2</i> (user IDs), <i>entailment</i> (label: Entailed / Not-entailed), <i>U_Background_kn</i> (user_1 knowledge profile)
-</ul>
+</p></ul>
 <ul> <h3>5. Indexer</h3>
-Use the whole CQADupStack question bodies to be indexed by the indexer.<br> 
-    <br><i>Example format:</i>
+<p align="justify">Use the whole CQADupStack question bodies to be indexed by the indexer.</p>
+    <i>Example format:</i>
     
 | index | Dataset | QuestionID | QuestionBody                                       | viewcount | dups  | title                                               | tags                   | userid | related | score | answers   | acceptedanswer | creationdate           | favoritecount | comments       |
 |-------|---------|------------|----------------------------------------------------|-----------|-------|------------------------------------------------------|------------------------|--------|---------|-------|-----------|----------------|------------------------|---------------|----------------|
@@ -64,13 +64,13 @@ Use the whole CQADupStack question bodies to be indexed by the indexer.<br>
 | 154   | Android | 3742       | HTC released Froyo already on some phones...      | 207       | 2696  | Upgrade HTC Legend to Froyo without waiting?        | 2.2-froyo htc-legend   | 366    |         | 2     | 3744 4822 | 4822           | 2010-12-16T21:22:09.140 | 0             |                |
 
 
-The data contains columns named:<br>
+<p align="justify">The data contains columns named:<br>
 <i>Dataset</i> (forum name), <i>QuestionID</i> (unique question identifier), <i>QuestionBody</i> (HTML-formatted question content), <i>viewcount</i> (number of times viewed), <i>dups</i> (duplicate question IDs), <i>title</i> (question title), <i>tags</i> (tab-separated tags), <i>userid</i> (ID of the user who posted), <i>related</i> (related question IDs), <i>score</i> (question score), <i>answers</i> (number of answers), <i>acceptedanswer</i> (ID of accepted answer), <i>creationdate</i> (timestamp of creation), <i>favoritecount</i> (number of times favorited), <i>comments</i> (comment IDs)
-
+</p>
 </ul>
 <ul> <h3> 6. Retriever </h3>
-Use the data named <code>Generator GPT-4o (TestData)</code>. For each of the 148 questions in this dataset, compare it with each indexed question from the Indexer step.<br> 
-    <br><i>Example format:</i>
+<p align="justify">Use the data named <code>Generator GPT-4o (TestData)</code>. For each of the 148 questions in this dataset, compare it with each indexed question from the Indexer step.</p>
+    <i>Example format:</i>
     
 | index | Question_ID | Forum_Name  | User_ID | Question_Body                                           | Duplicate_Questions | Tags                          | Accepted_Answer_ID | Accepted_Answer_Body                                                                                                                |
 |-------|-------------|-------------|---------|----------------------------------------------------------|---------------------|-------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -80,9 +80,112 @@ Use the data named <code>Generator GPT-4o (TestData)</code>. For each of the 148
 </ul>
 
 <ul> <h3> 7. Post-retrieval </h3>
-After retrieving the top-50 similar questions using the retriever, pass them to the fine-tuned RQE model as part of the post-retrieval process. Then, select the top-3 entailed questions based on their cosine similarity scores.
+<p align="justify">After retrieving the top-50 similar questions using the retriever, pass them to the fine-tuned RQE model as part of the post-retrieval process. Then, select the top-3 entailed questions based on their cosine similarity scores.</p>
 </ul>
 
 <ul>  <h3> 8. Generator </h3>
-The question bodies from the <code>Generator GPT-4o (TestData)</code> dataset, along with the top-3 entailed questions identified by the post-retrieval, are then passed to the Generator component.
-</ul>
+T<p align="justify">he question bodies from the <code>Generator GPT-4o (TestData)</code> dataset, along with the top-3 entailed questions identified by the post-retrieval, are then passed to the Generator component.
+</p></ul>
+
+## 🚀 Hyper-parameters
+
+<p> Here is the list of parameter settings used for fine-tuning each component: </p>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Hyperparameter</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="6">Node2vec</td>
+      <td>p</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>q</td>
+      <td>0.5</td>
+    </tr>
+    <tr>
+      <td>d</td>
+      <td>128</td>
+    </tr>
+    <tr>
+      <td>walk_length</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>num_walks</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>window</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td rowspan="4">Agglomerative clustering</td>
+      <td>metric</td>
+      <td>euclidean</td>
+    </tr>
+    <tr>
+      <td>linkage</td>
+      <td>ward</td>
+    </tr>
+    <tr>
+      <td>n_clusters</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <td>thresholds</td>
+      <td>32, 16, 8</td>
+    </tr>
+    <tr>
+      <td rowspan="9">LLaMA-2</td>
+      <td>max_epochs</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>learning_rate</td>
+      <td>1e-4<sup>*</sup>, 3e-5<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>batch_size</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <td>max_seq_length</td>
+      <td>512<sup>*</sup>, 750<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>max_new_tokens</td>
+      <td>30<sup>*</sup>, 1<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>lora_r</td>
+      <td>64<sup>*</sup>, 64<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>lora_alpha</td>
+      <td>64<sup>*</sup>, 16<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>lora_dropout</td>
+      <td>0.1<sup>*</sup>, 0.3<sup>+</sup></td>
+    </tr>
+    <tr>
+      <td>torch_dtype</td>
+      <td>bfloat16</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>k_1, k_2, k_3</td>
+      <td>10, 50, 3</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><small><sup>*</sup> used for the tag generation task, <sup>+</sup> used for the RQE task.</small></p>
+
