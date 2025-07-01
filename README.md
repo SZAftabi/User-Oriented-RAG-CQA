@@ -47,5 +47,20 @@ index | id_Q1 | id_Q2  | q1                                                     
 The data contains the following columns: <br>
 <i>index</i> (row number), <i>id_Q1, id_Q2</i> (question IDs), <i>q1, q2</i> (RQE questions), <i>body_Q1, body_Q2</i> (full question texts), <i>forum_x, forum_y</i> (forum names of Q1 and Q2), <i>dups_Q1, dups_Q2</i> (duplicate question IDs), <i>tags_Q1, tags_Q2</i> (associated tags), <i>title_Q1, title_Q2</i> (question titles), <i>userid_Q1, userid_Q2</i> (user IDs), <i>entailment</i> (label: Entailed / Not-entailed), <i>U_Background_kn</i> (user_1 knowledge profile)
 </ul>
+<ul> <h3>5. Indexer</h3>
+Use the whole CQADupStack question bodies to be indexed by the indexer.<br>
+<br> <i>Example format:</i>
 
+
+| index | Dataset | QuestionID | QuestionBody                                       | viewcount | dups  | title                                               | tags                   | userid | related | score | answers   | acceptedanswer | creationdate           | favoritecount | comments       |
+|-------|---------|------------|----------------------------------------------------|-----------|-------|------------------------------------------------------|------------------------|--------|---------|-------|-----------|----------------|------------------------|---------------|----------------|
+| 99    | Android | 23508      | Aoson M19 tablet, can't find USB drivers...       | 666       | 23449 | Aoson M19 -- Device Drivers                          | usb-drivers            | 15384  | 23449   | -1    | 23509     | 23509          | 2012-05-25T14:51:57.187 | 0             | 27690 27691     |
+| 154   | Android | 3742       | HTC released Froyo already on some phones...      | 207       | 2696  | Upgrade HTC Legend to Froyo without waiting?        | 2.2-froyo htc-legend   | 366    |         | 2     | 3744 4822 | 4822           | 2010-12-16T21:22:09.140 | 0             |                |
+
+
+The data contains columns named:<br>
+<i>Dataset</i> (forum name), <i>QuestionID</i> (unique question identifier), <i>QuestionBody</i> (HTML-formatted question content), <i>viewcount</i> (number of times viewed), <i>dups</i> (duplicate question IDs), <i>title</i> (question title), <i>tags</i> (tab-separated tags), <i>userid</i> (ID of the user who posted), <i>related</i> (related question IDs), <i>score</i> (question score), <i>answers</i> (number of answers), <i>acceptedanswer</i> (ID of accepted answer), <i>creationdate</i> (timestamp of creation), <i>favoritecount</i> (number of times favorited), <i>comments</i> (comment IDs)
+
+
+</ul>
 
