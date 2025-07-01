@@ -6,3 +6,7 @@ In recent years, pre-trained large language models (LLMs) have become a cornerst
 </p>
 <p align="center"><img src="ProposedSystem.jpg" width="700" alt="ProposedFramework"></p>
 <p align="center"><b> Fig 1. </b> Overview of the advanced knowledge- and retrieval- augmented generation-based community question answering system </p>
+
+## ⚙️ Data
+<p align="justify">
+
