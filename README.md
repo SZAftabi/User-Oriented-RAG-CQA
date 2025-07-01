@@ -13,7 +13,7 @@ You can freely access the CQADupStack dataset through the following link:<br>
 👉 http://nlp.cis.unimelb.edu.au/resources/cqadupstack/ <br><br>
 Follow the instructions below to use the corresponding data for each component of the proposed system:<br>
   <ul> <h3> 1. Tag Diversity Preprocessing </h3>
-Extract questions and their corresponding tags from CQADupStack to handle tag diversity before performing user modeling.
+Extract questions and their corresponding tags from CQADupStack to handle tag diversity before performing user modeling.<br> 
     <br><i>Example format:</i>
     
 index | QuestionBody                                                                                                                   | tags
@@ -23,12 +23,19 @@ index | QuestionBody                                                            
   </ul>
   <ul> <h3> 2. Tag Generation </h3>
 Use the file named <code>User-Profiler (TrainData)</code> to train the tag generation component of the user knowledge profiler.
-You may evaluate the model using <code>User-Profiler (TestData)</code>.
+You may evaluate the model using <code>User-Profiler (TestData)</code>.<br> 
+    <br><i>Example format:</i>
+    
+| index | Question_ID | Forum_Name | User_ID | Question_Body                                                                                                                                       | Tags                         |
+|-------|-------------|------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
+| 0     | 119926      | Unix       | 44686   | When I use "htop" command for linux (+F5), layout on 2 my vps different: Why on my first server I see broken tree?                                 | command-line terminal        |
+| 1     | 41391       | English    | 10460   | If I want to mention the word "furlong", for example, should I use furlong, "furlong", or 'furlong'? Also, am I correct in putting the punctuation outside the quotes? | punctuation quotations italics |
+
 </ul>
 <ul> <h3> 3. User Modeling </h3>
-The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.
-
-<br><i>Example format:</i>
+The file <code>UserHistory (TestData)</code> includes each user’s question history, allowing you to apply the fine-tuned model to generate user knowledge profiles based on past activity.<br> 
+    <br><i>Example format:</i>
+    
 index | userid | historyCount | historyIDs | history                                                                                       | forum
 ------|--------|--------------|------------|-----------------------------------------------------------------------------------------------|--------
 0     | 44281  | 1            | 161862     | I need to reproduce the following plot...                                                     | Tex
@@ -36,9 +43,9 @@ index | userid | historyCount | historyIDs | history                            
 </ul>
 <ul> <h3> 4. Recognizing Question Entailment (RQE)</h3>
 Use the data named <code>Post-retrieval (TrainData)</code> to fine-tune your LLaMA-2 model for the RQE task.
-You may evaluate the model using <code>Post-retrieval (TestData)</code>.
-
-<br> <i>Example format:</i>
+You may evaluate the model using <code>Post-retrieval (TestData)</code>.<br> 
+    <br><i>Example format:</i>
+    
 index | id_Q1 | id_Q2  | q1                                                         | q2                                      | ... | entailment | U_Background_kn
 ------|-------|--------|-------------------------------------------------------------|-----------------------------------------|-----|------------|-----------------
 0     | 119926| 48033  | When I use htop command for linux...                        | Is there a graphic tool to add new...   | ... | Not-entailed | linux, bash...
@@ -48,9 +55,9 @@ The data contains the following columns: <br>
 <i>index</i> (row number), <i>id_Q1, id_Q2</i> (question IDs), <i>q1, q2</i> (RQE questions), <i>body_Q1, body_Q2</i> (full question texts), <i>forum_x, forum_y</i> (forum names of Q1 and Q2), <i>dups_Q1, dups_Q2</i> (duplicate question IDs), <i>tags_Q1, tags_Q2</i> (associated tags), <i>title_Q1, title_Q2</i> (question titles), <i>userid_Q1, userid_Q2</i> (user IDs), <i>entailment</i> (label: Entailed / Not-entailed), <i>U_Background_kn</i> (user_1 knowledge profile)
 </ul>
 <ul> <h3>5. Indexer</h3>
-Use the whole CQADupStack question bodies to be indexed by the indexer.<br>
-
-  <br><i>Example format:</i>
+Use the whole CQADupStack question bodies to be indexed by the indexer.<br> 
+    <br><i>Example format:</i>
+    
 | index | Dataset | QuestionID | QuestionBody                                       | viewcount | dups  | title                                               | tags                   | userid | related | score | answers   | acceptedanswer | creationdate           | favoritecount | comments       |
 |-------|---------|------------|----------------------------------------------------|-----------|-------|------------------------------------------------------|------------------------|--------|---------|-------|-----------|----------------|------------------------|---------------|----------------|
 | 99    | Android | 23508      | Aoson M19 tablet, can't find USB drivers...       | 666       | 23449 | Aoson M19 -- Device Drivers                          | usb-drivers            | 15384  | 23449   | -1    | 23509     | 23509          | 2012-05-25T14:51:57.187 | 0             | 27690 27691     |
@@ -63,8 +70,8 @@ The data contains columns named:<br>
 </ul>
 <ul> <h3> 6. Retriever </h3>
 Use the data named <code>Generator GPT-4o (TestData)</code>. For each of the 148 questions in this dataset, compare it with each indexed question from the Indexer step.<br> 
-  <br><i>Example format:</i>
-  
+    <br><i>Example format:</i>
+    
 | index | Question_ID | Forum_Name  | User_ID | Question_Body                                           | Duplicate_Questions | Tags                          | Accepted_Answer_ID | Accepted_Answer_Body                                                                                                                |
 |-------|-------------|-------------|---------|----------------------------------------------------------|---------------------|-------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | 0     | 113905      | English     | 44174   | Trying to find a programmer with who / whom to work...   | 56                  | word-choice grammaticality    | 113906             | "With whom" is correct, but most say: "a programmer that I can collaborate with."                                                 |
