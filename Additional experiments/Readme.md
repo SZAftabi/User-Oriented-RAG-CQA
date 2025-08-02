@@ -58,7 +58,7 @@
 
 <p align="justify">
 <i><b>How effective is our proposed system in improving the quality of answers from various perspectives? </b></i><br>
-A criterion-wise statistical comparison of the three systems is also provided in Table 10, including 95% confidence intervals and pairwise p-values calculated based on the average scores from six AI evaluators.
+A criterion-wise statistical comparison of the three systems is also provided in Table 2, including 95% confidence intervals and pairwise p-values calculated based on the average scores from six AI evaluators.
 </p>
 <table border="0" cellspacing="0" cellpadding="6" align="center">
   <thead>
