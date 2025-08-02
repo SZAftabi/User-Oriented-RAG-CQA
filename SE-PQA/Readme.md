@@ -1,6 +1,6 @@
-![GitHub Repo](https://img.shields.io/badge/Research-Paper-blue)
-# **Experimental results on a selection subset of SE-PQA dataset, matched in size to the research test dataset**
-## 
+<h3>Experimental results on a selection subset of SE-PQA dataset, matched in size to the research test dataset </h3>
+
+<br>
 <p align="justify">
 <p align="center"><img src="Dendrogram.png" width="550" alt="Clustering dendrogram"></p>
 <p align="center"><b> Fig 1. </b> The dendrogram with selected thresholds for hierarchical clustering of tags in SE-PQA (Thresholds: 60, 35, 17)</p>  
