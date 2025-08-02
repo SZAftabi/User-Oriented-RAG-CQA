@@ -7,10 +7,10 @@
     <tr>
       <th rowspan="2">Method</th>
       <th colspan="3">HR@k<sub>2</sub></th>
-      <th rowspan="2">Average Time&nbsp;&uarr; (s)</th>
+      <th rowspan="2">Average Time (s)</th>
     </tr>
     <tr>
-      <th>10</th>
+      <th>10&nbsp;&darr;</th>
       <th>20</th>
       <th>50</th>
     </tr>
@@ -108,8 +108,9 @@ Updates can be performed either periodically or in an event-driven manner. We re
 </table>
 
 <p align="justify">
-<i><h3> ✔ How effective is our proposed system in improving the quality of answers from various perspectives? </h3></i><br>
-A criterion-wise statistical comparison of the three systems is also provided in Table 2, including 95% confidence intervals and pairwise p-values calculated based on the average scores from six AI evaluators.
+<i><h3> ✔ How effective is our proposed system in improving the quality of answers from various perspectives? </h3></i>
+<h4>AI-based evaluation:</h4> 
+  <p align="justify"> A criterion-wise statistical comparison of the three systems is also provided in Table 2, including 95% confidence intervals and pairwise p-values calculated based on the average scores from six AI evaluators. </p>
 </p>
 <table border="0" cellspacing="0" cellpadding="6" align="center">
   <thead>
@@ -231,10 +232,85 @@ A criterion-wise statistical comparison of the three systems is also provided in
 </table>
 
 <p align="center"><b>Table 2: </b>Statistical Analysis of Answer Generation Systems Based on Scores from Six AI Evaluators</p>
+<h4>Human-based evaluation: </h4> <p align="justify"> Table 3 summarizes average scores assigned by two human evaluators to <i><b>74 randomly selected questions</b></i>.  </p>
+
+<table align="center">
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>Rate (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>User-agnostic RAG</td>
+      <td>4.51</td>
+      <td>3.74</td>
+      <td>4.01</td>
+      <td>3.71</td>
+      <td>3.85</td>
+      <td>4.44</td>
+      <td>4.21</td>
+      <td>3.64</td>
+      <td>3.51</td>
+      <td>4.43</td>
+      <td>3.11</td>
+      <td>08.8</td>
+    </tr>
+    <tr>
+      <td>User-aware RAG (ours)</td>
+      <td><b>4.75</b></td>
+      <td><b>4.66</b></td>
+      <td><b>4.84</b></td>
+      <td><b>4.73</b></td>
+      <td><b>4.64</b></td>
+      <td>4.71</td>
+      <td><b>4.77</b></td>
+      <td><b>4.61</b></td>
+      <td><b>4.55</b></td>
+      <td>4.60</td>
+      <td><b>4.07</b></td>
+      <td><b>52.0</b></td>
+    </tr>
+    <tr>
+      <td>Pre-trained GPT-4o</td>
+      <td>4.67</td>
+      <td>4.46</td>
+      <td>4.68</td>
+      <td>4.61</td>
+      <td>4.59</td>
+      <td><b>4.80</b></td>
+      <td>4.76</td>
+      <td>4.37</td>
+      <td>4.11</td>
+      <td><b>4.71</b></td>
+      <td>4.00</td>
+      <td>39.9</td>
+    </tr>
+    <tr>
+      <td colspan="13">
+        1: Hallucination, 2: Correctness, 3: Relevance, 4: Clarity &amp; Conciseness, 5: Personalization, 6: Redundancy, 7: Complexity <br>Appropriateness, 8: Completeness, 9: Depth &amp; Detail, 10: Length Appropriateness, 11: Similarity to Gold Answer
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p align="center"><b>Table 3: </b> Average qualitative scores assigned by two human-experts to 74 randomly selected test questions (50% of test samples) </p>
 
 <p align="justify">
 <i><h3> ✔ Is the response time of the proposed system acceptable for practical deployment in Q&A communities? </h3></i><br>
-Although real-time responses are not expected in Q&A platforms, fast responses are still preferred. Table 3 reports the average processing time per user for each component, identifying the post-retrieval component as the main bottleneck. However, since retrieved questions can be assessed independently, parallelization is feasible, potentially reducing the delay to 0.36 seconds. Overall, the system delivers accurate and reliable responses in under 30 seconds.
+Although real-time responses are not expected in Q&A platforms, fast responses are still preferred. Table 4 reports the average processing time per user for each component, identifying the post-retrieval component as the main bottleneck. However, since retrieved questions can be assessed independently, parallelization is feasible, potentially reducing the delay to 0.36 seconds. Overall, the system delivers accurate and reliable responses in under 30 seconds.
 </p>
 
 <table border="0" cellspacing="0" cellpadding="6" align="center">
@@ -286,5 +362,5 @@ Although real-time responses are not expected in Q&A platforms, fast responses a
   </tbody>
 </table>
 
-<p align="center"><b>Table 3: </b>Average Processing Time of the System Components per User</p>
+<p align="center"><b>Table 4: </b>Average Processing Time of the System Components per User</p>
 
