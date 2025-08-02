@@ -3,7 +3,9 @@
 ## 
 <p align="justify">
 <p align="center"><img src="Dendrogram.png" width="550" alt="Clustering dendrogram"></p>
-<p align="center"><b> Fig 1. </b> The dendrogram with selected thresholds for hierarchical clustering of tags in SE-PQA (Thresholds: 60, 35, 17)</p>    
+<p align="center"><b> Fig 1. </b> The dendrogram with selected thresholds for hierarchical clustering of tags in SE-PQA (Thresholds: 60, 35, 17)</p>  
+<br>
+
 <table border="0" cellspacing="0" cellpadding="6" align="center">
   <thead>
     <tr>
