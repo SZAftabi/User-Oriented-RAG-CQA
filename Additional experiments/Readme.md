@@ -1,5 +1,5 @@
 <p align="justify">
-<i><b>How do different indexers compare in terms of retrieval success rate? </i></b><br>
+<i><h3> ✔ How do different indexers compare in terms of retrieval success rate? </i></h3><br>
   To answer this, seven indexing methods are evaluated using Hit Ratio at k<sub>2</sub> (HR@k<sub>2</sub>), which measures the proportion of queries with at least one entailed question among the top-k<sub>2</sub> retrieved items (for k<sub>2</sub>∈{10,20,50}). Results are presented in Table 1, where the <i>all-mpnet-base-v2</i> model is identified as the best-performing indexer. Table 1 also reports the average time of generating vector representation of each archived question. 
 </p>
 <table border="0" cellspacing="0" cellpadding="6" align="center">
@@ -57,7 +57,58 @@
 <p align="center"> <b>Table 1: </b>Comparative Analysis of Indexing Methods </p>
 
 <p align="justify">
-<i><b>How effective is our proposed system in improving the quality of answers from various perspectives? </b></i><br>
+<i><h3> ✔ How to maintain user knowledge profiles?</h3></i><br>
+To support future updates, knowledge profiles may be stored in separate JSON files per user, structured as follows:
+</p>
+<pre> "User_id": {
+  "Tags": [[str, …], …],
+  "Tag_frequncies": {str: int, …}
+}
+</pre>
+<p align="justify">
+Updates can be performed either periodically or in an event-driven manner. We recommend the latter, wherein a user's knowledge profile is updated immediately upon question submission, as outlined in Algorithm 1. The proposed model is time-efficient, with constant time complexity of O(1). It is also memory-efficient and scalable, with storage requirements that grow linearly with the number of users, i.e., O(N). Assuming one byte per character under UTF-8 encoding, each user requires on average around k₁ × 2L bytes to store their profile, where L denotes the average number of characters in a tag sequence.
+</p>
+<table align="center" borders="0">
+  <tr>
+    <td><b>Algorithm 1: </b>Event-driven update of user profile</td>
+  </tr>
+  <tr>
+    <td><b>Inputs:</b> new question (<code>q<sup>l</sup><sub>new</sub></code>), user id (<code>u<sup>l</sup></code>), maximum number of recent questions (<code>k₁</code>)
+      <br><b>Output:</b> Updated knowledge profile (<code>u-l.json</code>)
+    </td>
+  </tr>
+  <tr>
+    <td>1. if <code>exist(u-l.json)</code> then
+    <br>2.  <code>j ← open u-l.json</code> and parse it
+    <br>3.  <code>T, F ← j["Tags"], j["Tag_frequncies"]</code>
+    <br>4. else
+    <br>5.  <code>j ← create u-l.json</code> and open it
+    <<br>6.  <code>T, F ← [], {}</code>
+    <br>7. end
+    <<br>8. <code>t′ ← LLaMA(q_new^l)</code>
+    <br>9. if <code>|T| ≥ k₁</code> then
+    <br>10.  <code>T_old ← T.pop_front()</code>
+    <br>11.  foreach tag sequence <code>t</code> in <code>T_old</code> do
+    <br>12.   <code>F[t] ← F[t] - 1</code>
+    <br>13.   if <code>F[t] ≤ 0</code> then remove <code>t</code> from <code>F</code>
+    <br>14.  end
+    <br>15. end
+    <br>16. append <code>t′</code> to <code>T</code>
+    <br>17. foreach tag <code>t</code> in <code>t′</code> do
+    <br>18.  if <code>t ∈ F</code> then
+    <br>19.   <code>F[t] ← F[t] + 1</code>
+    <br>20.  else
+    <br>21.   <code>F[t] ← 1</code>
+    <br>22.  end
+    <br>23. end
+    <br>24. store <code>T</code> and <code>F</code> back into <code>u-l.json</code>
+    <br>25. return <code>u-l.json</code>
+    </td>
+  </tr>
+</table>
+
+<p align="justify">
+<i><h3> ✔ How effective is our proposed system in improving the quality of answers from various perspectives? </h3></i><br>
 A criterion-wise statistical comparison of the three systems is also provided in Table 2, including 95% confidence intervals and pairwise p-values calculated based on the average scores from six AI evaluators.
 </p>
 <table border="0" cellspacing="0" cellpadding="6" align="center">
@@ -182,7 +233,7 @@ A criterion-wise statistical comparison of the three systems is also provided in
 <p align="center"><b>Table 2: </b>Statistical Analysis of Answer Generation Systems Based on Scores from Six AI Evaluators</p>
 
 <p align="justify">
-<i><b> Is the response time of the proposed system acceptable for practical deployment in Q&A communities? </b></i><br>
+<i><h3> ✔ Is the response time of the proposed system acceptable for practical deployment in Q&A communities? </h3></i><br>
 Although real-time responses are not expected in Q&A platforms, fast responses are still preferred. Table 3 reports the average processing time per user for each component, identifying the post-retrieval component as the main bottleneck. However, since retrieved questions can be assessed independently, parallelization is feasible, potentially reducing the delay to 0.36 seconds. Overall, the system delivers accurate and reliable responses in under 30 seconds.
 </p>
 
