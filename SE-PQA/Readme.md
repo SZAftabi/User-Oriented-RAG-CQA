@@ -70,16 +70,16 @@
       <td>28.7</td><td>39.4</td>
       <td>6.3</td><td>8.6</td>
       <td>14.6</td><td>21.5</td>
-      <td>83.2</td><td>83.4</td>
-      <td>17.9</td><td>7.4</td><td>18.5</td><td>31.00</td>
+      <td><b>83.2</b></td><td>83.4</td>
+      <td>17.9</td><td>7.4</td><td>18.5</td><td><b>31.00</b></td>
     </tr>
     <tr>
       <td><b>User-aware RAG (ours)</b></td>
-      <td>29.6</td><td>42.2</td>
-      <td>6.6</td><td>9.6</td>
-      <td>14.8</td><td>22.7</td>
-      <td>83.2</td><td>83.7</td>
-      <td>18.5</td><td>7.7</td><td>19.1</td><td>32.30</td>
+      <td><b>29.6</b></td><td><b>42.2</b></td>
+      <td><b>6.6</b></td><td><b>9.6</b></td>
+      <td><b>14.8</b></td><td><b>22.7</b></td>
+      <td><b>83.2</b></td><td><b>83.7</b></td>
+      <td><b>18.5</b></td><td><b>7.7</b></td><td><b>19.1</b></td><td>32.30</td>
     </tr>
     <tr>
       <td><b>Pre-trained GPT-4o</b></td>
