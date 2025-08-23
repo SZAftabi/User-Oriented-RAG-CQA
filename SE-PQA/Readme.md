@@ -267,4 +267,126 @@
 </table>
 
 <p align="center"><b> Table 3: </b> Qualitative Analysis of User-Aware RAG vs. User-Agnostic RAG and Pre-trained GPT-4o on SE-PQA-Based Test Data </p>
+
+<br>
+<table border="0" cellspacing="0" cellpadding="6" align="center">
+  <thead>
+    <tr>
+      <th rowspan="2">Metric</th>
+      <th colspan="3">AI Evaluator Scores (Mean ± CI)</th>
+      <th colspan="3">p-value</th>
+    </tr>
+    <tr>
+      <th>User-agnostic RAG</th>
+      <th>Proposed system</th>
+      <th>Pre-trained GPT-4o</th>
+      <th>User-agnostic RAG vs Proposed</th>
+      <th>Proposed vs GPT-4o</th>
+      <th>User-agnostic RAG vs GPT-4o</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hallucination</td>
+      <td>4.2 &plusmn; 0.24</td>
+      <td>4.5 &plusmn; 0.19</td>
+      <td>4.5 &plusmn; 0.23</td>
+      <td>1.19E-02</td>
+      <td>8.14E-02</td>
+      <td>2.60E-01</td>
+    </tr>
+    <tr>
+      <td>Correctness</td>
+      <td>3.9 &plusmn; 0.24</td>
+      <td>4.2 &plusmn; 0.19</td>
+      <td>4.4 &plusmn; 0.23</td>
+      <td>1.82E-04</td>
+      <td>3.08E-02</td>
+      <td>3.54E-01</td>
+    </tr>
+    <tr>
+      <td>Relevance</td>
+      <td>4.5 &plusmn; 0.24</td>
+      <td>4.6 &plusmn; 0.19</td>
+      <td>4.7 &plusmn; 0.23</td>
+      <td>5.50E-02</td>
+      <td>6.76E-02</td>
+      <td>2.14E-01</td>
+    </tr>
+    <tr>
+      <td>Clarity &amp; Conciseness</td>
+      <td>4.0 &plusmn; 0.24</td>
+      <td>4.1 &plusmn; 0.19</td>
+      <td>4.7 &plusmn; 0.23</td>
+      <td>2.04E-05</td>
+      <td>1.43E-12</td>
+      <td>5.34E-08</td>
+    </tr>
+    <tr>
+      <td>Personalization</td>
+      <td>3.2 &plusmn; 0.24</td>
+      <td>3.3 &plusmn; 0.19</td>
+      <td>3.7 &plusmn; 0.23</td>
+      <td>1.42E-03</td>
+      <td>1.71E-04</td>
+      <td>1.04E-02</td>
+    </tr>
+    <tr>
+      <td>Redundancy</td>
+      <td>4.1 &plusmn; 0.24</td>
+      <td>4.0 &plusmn; 0.19</td>
+      <td>4.7 &plusmn; 0.23</td>
+      <td>2.51E-01</td>
+      <td>2.18E-12</td>
+      <td>1.34E-12</td>
+    </tr>
+    <tr>
+      <td>Complexity Appropriateness</td>
+      <td>4.5 &plusmn; 0.24</td>
+      <td>4.5 &plusmn; 0.19</td>
+      <td>4.7 &plusmn; 0.23</td>
+      <td>1.02E-02</td>
+      <td>7.31E-03</td>
+      <td>4.31E-02</td>
+    </tr>
+    <tr>
+      <td>Completeness</td>
+      <td>4.0 &plusmn; 0.24</td>
+      <td>4.2 &plusmn; 0.19</td>
+      <td>4.0 &plusmn; 0.23</td>
+      <td>7.23E-04</td>
+      <td>4.93E-01</td>
+      <td>4.82E-02</td>
+    </tr>
+    <tr>
+      <td>Depth &amp; Detail</td>
+      <td>3.9 &plusmn; 0.24</td>
+      <td>4.2 &plusmn; 0.19</td>
+      <td>3.8 &plusmn; 0.23</td>
+      <td>3.59E-03</td>
+      <td>1.52E-01</td>
+      <td>4.45E-03</td>
+    </tr>
+    <tr>
+      <td>Length Appropriateness</td>
+      <td>3.9 &plusmn; 0.24</td>
+      <td>4.0 &plusmn; 0.19</td>
+      <td>4.7 &plusmn; 0.23</td>
+      <td>1.73E-03</td>
+      <td>2.30E-12</td>
+      <td>7.88E-09</td>
+    </tr>
+    <tr>
+      <td>Comparative vs. Gold Answer</td>
+      <td>3.0 &plusmn; 0.24</td>
+      <td>3.4 &plusmn; 0.19</td>
+      <td>3.6 &plusmn; 0.23</td>
+      <td>3.76E-06</td>
+      <td>5.38E-03</td>
+      <td>2.51E-01</td>
+    </tr>
+  </tbody>
+</table>
+
+
 </p>
