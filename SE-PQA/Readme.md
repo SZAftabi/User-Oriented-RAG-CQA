@@ -215,7 +215,7 @@
       <td>4.35</td><td>4.40</td><td>4.70</td>
     </tr>
     <tr>
-      <td>Clarity &amp; Conciseness</td>
+      <th>Clarity &amp; Conciseness</th>
       <td>4.24</td><td>4.46</td><td>4.62</td>
       <td>4.13</td><td>4.44</td><td>4.71</td>
       <td>3.46</td><td>3.44</td><td>4.44</td>
