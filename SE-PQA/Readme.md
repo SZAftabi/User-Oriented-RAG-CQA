@@ -285,105 +285,83 @@
       <th>User-agnostic RAG vs GPT-4o</th>
     </tr>
   </thead>
-  <tbody>
+<tbody>
     <tr>
       <td>Hallucination</td>
-      <td>4.2 &plusmn; 0.24</td>
-      <td>4.5 &plusmn; 0.19</td>
-      <td>4.5 &plusmn; 0.23</td>
-      <td>1.19E-02</td>
-      <td>8.14E-02</td>
-      <td>2.60E-01</td>
+      <td>4.24&plusmn;0.25</td>
+      <td>4.50&plusmn;0.25</td>
+      <td>4.49&plusmn;0.22</td>
+      <td>1.19E-02</td><td>8.14E-02</td><td>2.60E-01</td>
     </tr>
     <tr>
       <td>Correctness</td>
-      <td>3.9 &plusmn; 0.24</td>
-      <td>4.2 &plusmn; 0.19</td>
-      <td>4.4 &plusmn; 0.23</td>
-      <td>1.82E-04</td>
-      <td>3.08E-02</td>
-      <td>3.54E-01</td>
+      <td>3.95&plusmn;0.34</td>
+      <td>4.23&plusmn;0.30</td>
+      <td>4.37&plusmn;0.23</td>
+      <td>1.82E-04</td><td>3.08E-02</td><td>3.54E-01</td>
     </tr>
     <tr>
       <td>Relevance</td>
-      <td>4.5 &plusmn; 0.24</td>
-      <td>4.6 &plusmn; 0.19</td>
-      <td>4.7 &plusmn; 0.23</td>
-      <td>5.50E-02</td>
-      <td>6.76E-02</td>
-      <td>2.14E-01</td>
+      <td>4.47&plusmn;0.29</td>
+      <td>4.57&plusmn;0.26</td>
+      <td>4.73&plusmn;0.14</td>
+      <td>5.50E-02</td><td>6.76E-02</td><td>2.14E-01</td>
     </tr>
     <tr>
       <td>Clarity &amp; Conciseness</td>
-      <td>4.0 &plusmn; 0.24</td>
-      <td>4.1 &plusmn; 0.19</td>
-      <td>4.7 &plusmn; 0.23</td>
-      <td>2.04E-05</td>
-      <td>1.43E-12</td>
-      <td>5.34E-08</td>
+      <td>3.99&plusmn;0.11</td>
+      <td>4.13&plusmn;0.12</td>
+      <td>4.71&plusmn;0.10</td>
+      <td>1.43E-12</td><td>5.34E-08</td>
     </tr>
     <tr>
       <td>Personalization</td>
-      <td>3.2 &plusmn; 0.24</td>
-      <td>3.3 &plusmn; 0.19</td>
-      <td>3.7 &plusmn; 0.23</td>
-      <td>1.42E-03</td>
-      <td>1.71E-04</td>
-      <td>1.04E-02</td>
+      <td>3.18&plusmn;0.20</td>
+      <td>3.32&plusmn;0.20</td>
+      <td>3.67&plusmn;0.14</td>
+      <td>1.71E-04</td><td>1.04E-02</td>
     </tr>
     <tr>
       <td>Redundancy</td>
-      <td>4.1 &plusmn; 0.24</td>
-      <td>4.0 &plusmn; 0.19</td>
-      <td>4.7 &plusmn; 0.23</td>
-      <td>2.51E-01</td>
-      <td>2.18E-12</td>
-      <td>1.34E-12</td>
+      <td>4.08&plusmn;0.11</td>
+      <td>4.04&plusmn;0.11</td>
+      <td>4.74&plusmn;0.08</td>
+      <td>2.51E-01</td><td>2.18E-12</td><td>1.34E-12</td>
     </tr>
     <tr>
       <td>Complexity Appropriateness</td>
-      <td>4.5 &plusmn; 0.24</td>
-      <td>4.5 &plusmn; 0.19</td>
-      <td>4.7 &plusmn; 0.23</td>
-      <td>1.02E-02</td>
-      <td>7.31E-03</td>
-      <td>4.31E-02</td>
+      <td>4.46&plusmn;0.18</td>
+      <td>4.54&plusmn;0.14</td>
+      <td>4.71&plusmn;0.07</td>
+      <td>1.02E-02</td><td>7.31E-03</td><td>4.31E-02</td>
     </tr>
     <tr>
       <td>Completeness</td>
-      <td>4.0 &plusmn; 0.24</td>
-      <td>4.2 &plusmn; 0.19</td>
-      <td>4.0 &plusmn; 0.23</td>
-      <td>7.23E-04</td>
-      <td>4.93E-01</td>
-      <td>4.82E-02</td>
+      <td>3.96&plusmn;0.30</td>
+      <td>4.23&plusmn;0.28</td>
+      <td>4.01&plusmn;0.16</td>
+      <td>7.23E-04</td><td>4.93E-01</td><td>4.82E-02</td>
     </tr>
     <tr>
       <td>Depth &amp; Detail</td>
-      <td>3.9 &plusmn; 0.24</td>
-      <td>4.2 &plusmn; 0.19</td>
-      <td>3.8 &plusmn; 0.23</td>
-      <td>3.59E-03</td>
-      <td>1.52E-01</td>
-      <td>4.45E-03</td>
+      <td>3.94&plusmn;0.28</td>
+      <td>4.20&plusmn;0.26</td>
+      <td>3.80&plusmn;0.16</td>
+      <td>3.59E-03</td><td>1.52E-01</td><td>4.45E-03</td>
     </tr>
     <tr>
       <td>Length Appropriateness</td>
-      <td>3.9 &plusmn; 0.24</td>
-      <td>4.0 &plusmn; 0.19</td>
-      <td>4.7 &plusmn; 0.23</td>
-      <td>1.73E-03</td>
-      <td>2.30E-12</td>
-      <td>7.88E-09</td>
+      <td>3.93&plusmn;0.15</td>
+      <td>4.03&plusmn;0.15</td>
+      <td>4.71&plusmn;0.08</td>
+      <td>1.73E-03</td><td>2.30E-12</td><td>7.88E-09</td>
     </tr>
     <tr>
       <td>Comparative vs. Gold Answer</td>
-      <td>3.0 &plusmn; 0.24</td>
-      <td>3.4 &plusmn; 0.19</td>
-      <td>3.6 &plusmn; 0.23</td>
-      <td>3.76E-06</td>
-      <td>5.38E-03</td>
-      <td>2.51E-01</td>
+      <td>3.03&plusmn;0.28</td>
+      <td>3.35&plusmn;0.29</td>
+      <td>3.59&plusmn;0.24</td>
+      <td>3.76E-06</td><td>5.38E-03</td><td>2.51E-01</td>
     </tr>
   </tbody>
 </table>
