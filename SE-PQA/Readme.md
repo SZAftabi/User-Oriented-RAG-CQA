@@ -312,14 +312,14 @@
       <td>3.99&plusmn;0.11</td>
       <td>4.13&plusmn;0.12</td>
       <td>4.71&plusmn;0.10</td>
-      <td>1.43E-12</td><td>5.34E-08</td>
+      <td>1.43E-12</td><td>5.34E-08</td><td>5.34E-08</td>
     </tr>
     <tr>
       <td>Personalization</td>
       <td>3.18&plusmn;0.20</td>
       <td>3.32&plusmn;0.20</td>
       <td>3.67&plusmn;0.14</td>
-      <td>1.71E-04</td><td>1.04E-02</td>
+      <td>1.71E-04</td><td>1.04E-02</td><td>1.04E-02</td>
     </tr>
     <tr>
       <td>Redundancy</td>
