@@ -110,13 +110,9 @@ In recent years, pre-trained large language models (LLMs) have become a cornerst
 <p><small><sup>*</sup> used for the tag generation task, <sup>+</sup> used for the RQE task.</small></p>
 
 <br>
-<p align="justify>
 
 For more information about: <br>
 
 ![hippo](http://www.pgia.pdn.ac.lk/files/images/blinking_new.gif) the dataset, please refer to <code>\data\Readme</code>. <br>
 ![hippo](http://www.pgia.pdn.ac.lk/files/images/blinking_new.gif) experimental results on the research dataset derived from <b>CQADupStack</b>, please refer to <code>\Additional experiments\Readme</code>. <br>
 ![hippo](http://www.pgia.pdn.ac.lk/files/images/blinking_new.gif) experimental results on the second research dataset, which is a selected subset of the <b>SE-PQA dataset</b>, please refer to <code>\SE-PQA\Readme</code>. <br>
-
-
-</p>
