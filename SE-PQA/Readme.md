@@ -98,7 +98,7 @@
 
 <p align="center"><b> Table 2: </b> Quantitative Analysis of User-Aware RAG vs. User-Agnostic RAG and Pre-trained GPT-4o on SE-PQA-Based Test Data </p>
 
-
+<br>
 <table>
   <thead>
     <tr>
@@ -106,132 +106,163 @@
       <th colspan="3">Deepseek</th>
       <th colspan="3">Grok</th>
       <th colspan="3">Qwen</th>
-      <th colspan="3">GPT-4o</th>
-      <th colspan="3">GPT-O4-mini</th>
-      <th colspan="3">Claude</th>
-      <th colspan="3">Average</th>
     </tr>
     <tr>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
-      <th>User-agnostic RAG</th><th>Proposed system</th><th>Pretrained GPT-4o</th>
+      <th> User-agnostic RAG</th>
+      <th> Proposed system</th>
+      <th> Pretrained GPT-4o</th>
+      <th> User-agnostic RAG</th>
+      <th> Proposed system</th>
+      <th> Pretrained GPT-4o</th>
+      <th> User-agnostic RAG</th>
+      <th> Proposed system</th>
+      <th> Pretrained GPT-4o</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Hallucination</td>
+      <th>Hallucination</th>
       <td>4.21</td><td>4.67</td><td>4.44</td>
       <td>4.13</td><td>4.32</td><td>4.22</td>
       <td>4.13</td><td>4.46</td><td>4.49</td>
-      <td>4.56</td><td>4.76</td><td>4.56</td>
-      <td>4.22</td><td>4.63</td><td>4.65</td>
-      <td>4.17</td><td>4.33</td><td>4.35</td>
-      <td>4.24</td><td>4.53</td><td>4.45</td>
     </tr>
     <tr>
-      <td>Correctness</td>
+      <th>Correctness</th>
       <td>3.84</td><td>4.32</td><td>4.30</td>
       <td>3.92</td><td>4.17</td><td>4.24</td>
       <td>3.97</td><td>4.27</td><td>4.35</td>
-      <td>4.19</td><td>4.40</td><td>4.35</td>
-      <td>4.13</td><td>4.48</td><td>4.52</td>
-      <td>3.78</td><td>3.97</td><td>4.27</td>
-      <td>3.97</td><td>4.27</td><td>4.34</td>
     </tr>
     <tr>
-      <td>Relevance</td>
+      <th>Relevance</th>
       <td>4.59</td><td>4.71</td><td>4.75</td>
       <td>4.63</td><td>4.70</td><td>4.87</td>
       <td>4.35</td><td>4.51</td><td>4.71</td>
-      <td>4.40</td><td>4.57</td><td>4.52</td>
-      <td>4.43</td><td>4.60</td><td>4.71</td>
-      <td>4.35</td><td>4.40</td><td>4.70</td>
-      <td>4.46</td><td>4.58</td><td>4.71</td>
     </tr>
     <tr>
-      <td>Clarity &amp; Conciseness</td>
+      <th>Clarity &amp; Conciseness</th>
       <td>3.94</td><td>4.25</td><td>4.84</td>
       <td>4.32</td><td>4.22</td><td>4.84</td>
       <td>3.73</td><td>4.33</td><td>4.68</td>
-      <td>4.24</td><td>4.46</td><td>4.62</td>
-      <td>4.13</td><td>4.44</td><td>4.71</td>
-      <td>3.46</td><td>3.44</td><td>4.44</td>
-      <td>3.97</td><td>4.19</td><td>4.69</td>
     </tr>
     <tr>
-      <td>Personalization</td>
+      <th>Personalization</th>
       <td>3.29</td><td>3.59</td><td>4.02</td>
       <td>3.19</td><td>3.22</td><td>3.43</td>
       <td>3.73</td><td>4.03</td><td>4.56</td>
-      <td>3.32</td><td>3.48</td><td>3.44</td>
-      <td>2.41</td><td>2.56</td><td>2.67</td>
-      <td>2.97</td><td>3.05</td><td>3.41</td>
-      <td>3.15</td><td>3.32</td><td>3.59</td>
     </tr>
     <tr>
-      <td>Redundancy</td>
+      <th>Redundancy</th>
       <td>3.84</td><td>4.03</td><td>4.83</td>
       <td>4.46</td><td>4.21</td><td>4.94</td>
       <td>4.14</td><td>4.54</td><td>4.83</td>
-      <td>4.43</td><td>4.57</td><td>4.68</td>
-      <td>4.06</td><td>4.13</td><td>4.75</td>
-      <td>3.44</td><td>3.17</td><td>4.32</td>
-      <td>4.06</td><td>4.11</td><td>4.72</td>
     </tr>
     <tr>
-      <td>Complexity Appropriateness</td>
+      <th>Complexity Appropriateness</th>
       <td>4.86</td><td>4.87</td><td>4.92</td>
       <td>4.86</td><td>4.86</td><td>4.94</td>
       <td>4.25</td><td>4.52</td><td>4.70</td>
-      <td>4.63</td><td>4.73</td><td>4.76</td>
-      <td>4.60</td><td>4.78</td><td>4.89</td>
-      <td>3.62</td><td>3.65</td><td>4.06</td>
-      <td>4.47</td><td>4.57</td><td>4.71</td>
     </tr>
     <tr>
-      <td>Completeness</td>
+      <th>Completeness</th>
       <td>3.68</td><td>4.27</td><td>3.92</td>
       <td>4.11</td><td>4.21</td><td>4.17</td>
       <td>3.87</td><td>4.22</td><td>4.03</td>
-      <td>4.13</td><td>4.37</td><td>3.79</td>
-      <td>4.11</td><td>4.48</td><td>3.97</td>
-      <td>3.89</td><td>4.03</td><td>3.95</td>
-      <td>3.97</td><td>4.26</td><td>3.97</td>
     </tr>
     <tr>
-      <td>Depth &amp; Detail</td>
+      <th>Depth &amp; Detail</th>
       <td>3.86</td><td>4.40</td><td>3.98</td>
       <td>4.03</td><td>4.16</td><td>3.68</td>
       <td>3.75</td><td>4.16</td><td>4.02</td>
-      <td>4.13</td><td>4.37</td><td>3.76</td>
-      <td>4.11</td><td>4.33</td><td>3.75</td>
-      <td>3.83</td><td>3.92</td><td>3.43</td>
-      <td>3.95</td><td>4.22</td><td>3.77</td>
     </tr>
     <tr>
-      <td>Length Appropriateness</td>
+      <th>Length Appropriateness</th>
       <td>4.06</td><td>4.24</td><td>4.89</td>
       <td>4.05</td><td>4.06</td><td>4.89</td>
       <td>3.63</td><td>4.21</td><td>4.54</td>
-      <td>4.27</td><td>4.40</td><td>4.60</td>
-      <td>4.17</td><td>4.51</td><td>4.84</td>
-      <td>3.32</td><td>3.16</td><td>4.44</td>
-      <td>3.92</td><td>4.10</td><td>4.70</td>
     </tr>
     <tr>
-      <td>Similarity score to the gold answer</td>
+      <th>Similarity score to the gold answer</th>
       <td>2.81</td><td>3.59</td><td>3.84</td>
       <td>2.94</td><td>3.06</td><td>3.29</td>
       <td>2.76</td><td>3.19</td><td>3.65</td>
+    </tr>
+  </tbody>
+  <thead>
+    <tr>
+      <th rowspan="2">Metric</th>
+      <th colspan="3">GPT-4o</th>
+      <th colspan="3">GPT-O4-mini</th>
+      <th colspan="3">Claude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Hallucination</th>
+      <td>4.56</td><td>4.76</td><td>4.56</td>
+      <td>4.22</td><td>4.63</td><td>4.65</td>
+      <td>4.17</td><td>4.33</td><td>4.35</td>
+    </tr>
+    <tr>
+      <th>Correctness</th>
+      <td>4.19</td><td>4.40</td><td>4.35</td>
+      <td>4.13</td><td>4.48</td><td>4.52</td>
+      <td>3.78</td><td>3.97</td><td>4.27</td>
+    </tr>
+    <tr>
+      <th>Relevance</th>
+      <td>4.40</td><td>4.57</td><td>4.52</td>
+      <td>4.43</td><td>4.60</td><td>4.71</td>
+      <td>4.35</td><td>4.40</td><td>4.70</td>
+    </tr>
+    <tr>
+      <td>Clarity &amp; Conciseness</td>
+      <td>4.24</td><td>4.46</td><td>4.62</td>
+      <td>4.13</td><td>4.44</td><td>4.71</td>
+      <td>3.46</td><td>3.44</td><td>4.44</td>
+    </tr>
+    <tr>
+      <th>Personalization</th>
+      <td>3.32</td><td>3.48</td><td>3.44</td>
+      <td>2.41</td><td>2.56</td><td>2.67</td>
+      <td>2.97</td><td>3.05</td><td>3.41</td>
+    </tr>
+    <tr>
+      <th>Redundancy</th>
+      <td>4.43</td><td>4.57</td><td>4.68</td>
+      <td>4.06</td><td>4.13</td><td>4.75</td>
+      <td>3.44</td><td>3.17</td><td>4.32</td>
+    </tr>
+    <tr>
+      <th>Complexity Appropriateness</th>
+      <td>4.63</td><td>4.73</td><td>4.76</td>
+      <td>4.60</td><td>4.78</td><td>4.89</td>
+      <td>3.62</td><td>3.65</td><td>4.06</td>
+    </tr>
+    <tr>
+      <th>Completeness</th>
+      <td>4.13</td><td>4.37</td><td>3.79</td>
+      <td>4.11</td><td>4.48</td><td>3.97</td>
+      <td>3.89</td><td>4.03</td><td>3.95</td>
+    </tr>
+    <tr>
+      <th>Depth &amp; Detail</th>
+      <td>4.13</td><td>4.37</td><td>3.76</td>
+      <td>4.11</td><td>4.33</td><td>3.75</td>
+      <td>3.83</td><td>3.92</td><td>3.43</td>
+    </tr>
+    <tr>
+      <th>Length Appropriateness</th>
+      <td>4.27</td><td>4.40</td><td>4.60</td>
+      <td>4.17</td><td>4.51</td><td>4.84</td>
+      <td>3.32</td><td>3.16</td><td>4.44</td>
+    </tr>
+    <tr>
+      <th>Similarity score to the gold answer</th>
       <td>3.62</td><td>4.00</td><td>3.51</td>
       <td>3.63</td><td>3.97</td><td>3.71</td>
       <td>2.52</td><td>2.65</td><td>3.27</td>
-      <td>3.05</td><td>3.41</td><td>3.54</td>
     </tr>
+
   </tbody>
 </table>
 
