@@ -388,5 +388,6 @@
   </tbody>
 </table>
 
+<p align="center"><b> Table 4: </b>Statistical Analysis of Answer Generation Systems Based on Scores from Six AI Evaluators on the SE-PQA dataset</p>
 
 </p>
