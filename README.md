@@ -115,3 +115,24 @@ For more information about: <br>
 
 ![till](./new.gif) the dataset, please refer to <code>\data\Readme</code>. <br>
 ![till](./new.gif) experimental results on the second research dataset, which is a selected subset of the <b>SE-PQA dataset</b>, please refer to <code>\SE-PQA</code>. <br>
+
+## 📌 Citation
+
+If you use this work, please cite our [paper](https://aclanthology.org/2026.findings-eacl.132/) as follows:
+
+```bibtex
+@inproceedings{aftabi-farzi-2026-enhancing,
+    title = {Enhancing Reliability in Community Question Answering with an Expert-Oriented {RAG} System},
+    author = {Aftabi, Seyyede Zahra  and Farzi, Saeed},
+    booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026},
+    month = {mar},
+    year = {2026},
+    address = {Rabat, Morocco},
+    publisher = {Association for Computational Linguistics},
+    doi = "10.18653/v1/2026.findings-eacl.132",
+    url = "https://aclanthology.org/2026.findings-eacl.132/",
+    pages = "2551--2569",
+    ISBN = "979-8-89176-386-9",
+}
+```
+
