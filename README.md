@@ -122,17 +122,17 @@ If you use this work, please cite our [paper](https://aclanthology.org/2026.find
 
 ```bibtex
 @inproceedings{aftabi-farzi-2026-enhancing,
-    title = {Enhancing Reliability in Community Question Answering with an Expert-Oriented {RAG} System},
-    author = {Aftabi, Seyyede Zahra  and Farzi, Saeed},
-    booktitle = {Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026},
-    month = {mar},
-    year = {2026},
-    address = {Rabat, Morocco},
-    publisher = {Association for Computational Linguistics},
-    doi = {10.18653/v1/2026.findings-eacl.132},
-    url = {https://aclanthology.org/2026.findings-eacl.132/},
-    pages = {2551--2569},
-    ISBN = {979-8-89176-386-9},
+    title = "Enhancing Reliability in Community Question Answering with an Expert-Oriented {RAG} System",
+    author = "Aftabi, Seyyede Zahra  and Farzi, Saeed",
+    booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2026",
+    month = mar,
+    year = "2026",
+    address = "Rabat, Morocco",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.findings-eacl.132/",
+    doi = "10.18653/v1/2026.findings-eacl.132",
+    pages = "2551--2569",
+    ISBN = "979-8-89176-386-9"
 }
 ```
 
