@@ -129,10 +129,10 @@ If you use this work, please cite our [paper](https://aclanthology.org/2026.find
     year = {2026},
     address = {Rabat, Morocco},
     publisher = {Association for Computational Linguistics},
-    doi = "10.18653/v1/2026.findings-eacl.132",
-    url = "https://aclanthology.org/2026.findings-eacl.132/",
-    pages = "2551--2569",
-    ISBN = "979-8-89176-386-9",
+    doi = {10.18653/v1/2026.findings-eacl.132},
+    url = {https://aclanthology.org/2026.findings-eacl.132/},
+    pages = {2551--2569},
+    ISBN = {979-8-89176-386-9},
 }
 ```
 
